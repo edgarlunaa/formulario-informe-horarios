@@ -5,6 +5,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
+import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormControl, ValidationErrors } from '@angular/forms'
 import { FormlyModule, FormlyFieldConfig } from '@ngx-formly/core'
 import { FormlyMaterialModule } from '@ngx-formly/material'
@@ -56,6 +57,7 @@ export function IpValidatorMessage(err, field: FormlyFieldConfig) {
 @NgModule({
 	declarations: [AppComponent, RepeatTypeComponent, NoRepeatTypeComponent, FormlyFieldButton],
 	imports: [
+		CommonModule,
 		BrowserModule,
 		HttpClientModule,
 		AppRoutingModule,
